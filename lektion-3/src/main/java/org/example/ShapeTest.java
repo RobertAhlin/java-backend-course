@@ -18,5 +18,23 @@ public class ShapeTest {
             System.out.println("Omkrets: " + s.calculatePerimeter());
             System.out.println("---");
         }
+
+        List<Resizable> resizables = new ArrayList<>();
+        resizables.add(new Circle("Gul", 3));
+        resizables.add(new Rectangle("Grå", 2, 4));
+
+        for (Resizable r : resizables) {
+            r.resize(1.5);
+        }
+
+        List<Rotatable> rotatables = new ArrayList<>();
+        rotatables.add(new Rectangle("Grön", 3, 6));
+        rotatables.add(new Triangle("Lila", 3, 4, 5));
+
+        for (Rotatable r : rotatables) {
+            r.rotate(90);
+        }
+
+
     }
 }

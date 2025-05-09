@@ -1,6 +1,6 @@
 package org.example;
 
-public class Circle extends Shape {
+public class Circle extends Shape implements Resizable {
     private double radius;
 
     public Circle(String color, double radius) {
@@ -22,12 +22,17 @@ public class Circle extends Shape {
         return radius;
     }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
+    @Override
+    public void resize(double factor) {
+        radius *= factor;
+        System.out.println("Cirkeln har ändrats i storlek. Ny radie: " + radius);
     }
+
 
     @Override
     public String toString() {
         return "Circle (color=" + getColor() + ", radius=" + radius + ")";
     }
+
+
 }
