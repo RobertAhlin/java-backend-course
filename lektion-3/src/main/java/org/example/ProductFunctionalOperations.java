@@ -28,6 +28,19 @@ public class ProductFunctionalOperations {
             System.out.println(name);
         }
 
+        //Testar priskalkulatorn
+        PriceCalculator taxCalculator = product -> product.getPrice() * 1.25;
+        Product product = new Product(1, "Laptop", 1000.0, "Electronics");
+
+        double finalPrice = taxCalculator.calculate(product);
+        System.out.println("Slutpris med moms: " + finalPrice);
+
+        //Testa ProductValidator
+        ProductValidator expensiveValidator = p -> p.getPrice() > 500;
+        boolean isExpensive = expensiveValidator.validate(product);
+
+        System.out.println("Är produkten dyr? " + isExpensive);
+
     }
 
     // Steg 2: filterProducts-metod hit
