@@ -17,7 +17,7 @@ public class Main {
         }
 
         try {
-            Product p = new Product("TV", 0, 5);
+            Product p = new Product(1, "TV", "Smart-TV", 0.0, 5, "Electronics", "", "WH01");
             service.validateProduct(p);
         } catch (ValidationException e) {
             System.out.println("Product validation failed: " + e.getMessage());
