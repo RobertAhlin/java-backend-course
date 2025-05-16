@@ -22,5 +22,13 @@ public class Main {
         } catch (ValidationException e) {
             System.out.println("Product validation failed: " + e.getMessage());
         }
+
+        try {
+            Address address = new Address("Storgatan 1", "Stockholm", "12345");
+            service.validateAddress(address);
+            System.out.println("Valid address passed.");
+        } catch (ValidationException e) {
+            System.out.println("Address validation failed: " + e.getMessage());
+        }
     }
 }

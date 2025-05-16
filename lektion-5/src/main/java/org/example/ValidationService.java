@@ -55,4 +55,24 @@ public class ValidationService {
             throw new ValidationException("Product stock quantity cannot be negative");
         }
     }
+
+    public void validateAddress(Address address) throws AddressValidationException {
+        if (address == null) {
+            throw new AddressValidationException("Address cannot be null");
+        }
+
+        if (address.getStreet() == null || address.getStreet().isBlank()) {
+            throw new AddressValidationException("Street cannot be empty");
+        }
+
+        if (address.getCity() == null || address.getCity().isBlank()) {
+            throw new AddressValidationException("City cannot be empty");
+        }
+
+        if (address.getPostalCode() == null || !address.getPostalCode().matches("\\d{5}")) {
+            throw new AddressValidationException("Postal code must be 5 digits");
+        }
+    }
+
+
 }
