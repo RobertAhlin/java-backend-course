@@ -1,10 +1,11 @@
 package org.example.controller;
 
 import org.example.exception.ErrorResponse;
-import org.example.handler.GlobalExceptionHandler;
 import org.example.http.Response;
 import org.example.model.Product;
 import org.example.service.ProductService;
+import org.example.handler.GlobalExceptionHandler;
+
 
 public class ProductController {
     private final ProductService productService;

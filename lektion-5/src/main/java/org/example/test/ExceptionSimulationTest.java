@@ -1,11 +1,12 @@
 package org.example.test;
 
 import org.example.controller.ProductController;
-import org.example.handler.GlobalExceptionHandler;
 import org.example.http.Response;
 import org.example.repository.InMemoryProductRepository;
 import org.example.repository.ProductRepository;
 import org.example.service.ProductService;
+import org.example.handler.GlobalExceptionHandler;
+
 
 public class ExceptionSimulationTest {
     public static void main(String[] args) {
